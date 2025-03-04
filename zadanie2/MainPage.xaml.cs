@@ -27,6 +27,11 @@
         {
             mylabel.FontSize = e.NewValue;
         }
+        private void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        {
+           progressbar.Progress = e.NewValue;
+        }
+
 
 
     }

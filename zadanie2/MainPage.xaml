@@ -14,11 +14,15 @@
         <Slider x:Name="fontSizeSlider" Minimum="0" Maximum="100" Value="20" ValueChanged="OnFontSizeChange"/>
         <Label  Text="Wielkosc czcionki" HorizontalOptions="Center"/>
 
-        <Slider x:Name="backgroundSlider" Minimum="0" Maximum="1" Value="0" ValueChanged="OnBackgroundColorChange"/>
+        
+
+        <Slider x:Name="backgroundSlider" Minimum="0" Maximum="1" Value="0" ValueChanged="OnSliderValueChanged"/>
         <Label Text="Zmien kolor tla" HorizontalOptions="Center"/>
+        <ProgressBar x:Name="progressbar" Progress="{Binding Source={x:Reference backgroundSlider}, Path=Value} "/>
 
         <Stepper x:Name="fontSizeStepper" Minimum="0" Maximum="100" Value="20" ValueChanged="OnFontSizeStepperChange"/>
         <Label  Text="Wielkosc czcionki Stepper" HorizontalOptions="Center"/>
+        <Label Text="steppernowy" FontSize="{Binding Source={x:Reference fontSizeStepper }, Path=Value}"/>
     </VerticalStackLayout>
 
 
