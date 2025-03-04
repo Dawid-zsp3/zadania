@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zadanie2.MainPage">
+
+
+    <VerticalStackLayout Padding="30" VerticalOptions="Center">
+        <Label x:Name="mylabel" Text="przykladowy tekst" FontSize="20" HorizontalOptions="Center"/>
+       
+        <Slider x:Name="mojSlider" Minimum="0" Maximum="100" Value="50"/>
+        <Button Text="Resetuj suwak do 50" Clicked="OnResetButtonClicked"/>
+        <Label x:Name="valueLabel" Text="0" FontSize="20" HorizontalOptions="Center"/>
+
+        <Slider x:Name="fontSizeSlider" Minimum="0" Maximum="100" Value="20" ValueChanged="OnFontSizeChange"/>
+        <Label  Text="Wielkosc czcionki" HorizontalOptions="Center"/>
+
+        <Slider x:Name="backgroundSlider" Minimum="0" Maximum="1" Value="0" ValueChanged="OnBackgroundColorChange"/>
+        <Label Text="Zmien kolor tla" HorizontalOptions="Center"/>
+
+        <Stepper x:Name="fontSizeStepper" Minimum="0" Maximum="100" Value="20" ValueChanged="OnFontSizeStepperChange"/>
+        <Label  Text="Wielkosc czcionki Stepper" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+
+
+</ContentPage>
